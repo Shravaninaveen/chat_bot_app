@@ -1,2 +1,6 @@
-groq api key
-.env
+streamlit
+langchain
+langchain-core
+langchain-community
+langchain-groq
+python-dotenv
