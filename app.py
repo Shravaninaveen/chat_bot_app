@@ -12,7 +12,10 @@ from langchain_core.runnables import RunnableWithMessageHistory
 
 load_dotenv()
 
-llm = ChatGroq(groq_api_key=os.getenv('GROQ_API_KEY'),model='llama-3.3-70b-versatile')
+llm = ChatGroq(
+    groq_api_key=st.secrets["GROQ_API_KEY"],
+    model='llama-3.3-70b-versatile'
+)
 
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a helpful AI assistant.Remember the last conversations"),
